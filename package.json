@@ -1,0 +1,29 @@
+{
+  "name": "swfw",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier ./build --prose-wrap=always --write",
+    "start": "wrangler dev",
+    "build": "rm -rf ./build && npx tsx ./esbuild.ts && npm run format",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [],
+  "author": "Jeremiah Langner",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@minify-html/node": "^0.15.0",
+    "@minify-html/wasm": "^0.15.0",
+    "urlpattern-polyfill": "^10.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241112.0",
+    "@types/node": "^22.9.0",
+    "@types/web": "^0.0.178",
+    "buffer": "^6.0.3",
+    "esbuild": "^0.25.0",
+    "sass": "^1.85.1",
+    "wrangler": "^3.86.1"
+  }
+}

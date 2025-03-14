@@ -1,0 +1,63 @@
+/* colors */
+$color-cream: #eddcca;
+$color-red: #801202;
+
+/* fonts */
+$font-size-default: 16px;
+
+html {
+  background: $color-red;
+  box-sizing: border-box;
+  font-size: $font-size-default;
+  color: $color-cream;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logomark {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-family: cursive;
+    font-style: italic;
+    font-size: 64px;
+  }
+
+  h1 {
+    font-size: 120px;
+    font-weight: 800;
+  }
+}
