@@ -1,5 +1,6 @@
 import { html, HTMLResponse } from "@core";
 import styles from '../assets/styles.scss';
+import fixi from '../assets/fixi.js'; // @ts-ignore
 
 type PageParams = {
   template?: string,

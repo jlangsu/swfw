@@ -15,12 +15,7 @@ self.addEventListener("activate", () => {});
 let DB: Database | undefined;
 
 self.addEventListener("fetch", (event) => {
-  // TODO: localize
-  const whiteList = [
-    "https://unpkg.com/hyperscript.org",
-    "https://unpkg.com/htmx.org",
-    "https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js",
-  ];
+  const whiteList: string[] = [];
 
   if (whiteList.includes(event.request.url)) {
     return fetch(event.request);
