@@ -1,6 +1,6 @@
 import { build } from "esbuild";
 import { readFileSync, writeFileSync } from "fs";
-import sass from 'sass';
+import sass from "sass";
 
 async function Build() {
   const scssLoader = {
@@ -38,19 +38,6 @@ async function Build() {
     writeFileSync("./.assets/sw.json", JSON.stringify({ sw }), {
       encoding: "utf8",
     });
-
-
-    /*
-    const htmx = readFileSync("./.assets/htmx.min.js", { encoding: "utf8" });
-    writeFileSync("./.assets/htmx.json", JSON.stringify({ htmx }), {
-      encoding: "utf8",
-    });
-
-    const hyperscript = readFileSync("./.assets/hyperscript.min.js", { encoding: "utf8" });
-    writeFileSync("./.assets/hyperscript.json", JSON.stringify({ hyperscript }), {
-      encoding: "utf8",
-    });
-    */
 
     // build with all imports
     await build({
