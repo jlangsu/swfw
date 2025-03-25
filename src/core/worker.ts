@@ -7,7 +7,10 @@ const router = new Router([
   ["/sw.js", ServiceWorker],
   [
     "/db/:key",
-    async (args) => JSONResponse(await JSONHandler(args as HandlerArgs)),
+    async (args) => {
+      console.log('args', args);
+      return JSONResponse(await JSONHandler(args as HandlerArgs));
+    },
   ],
   [
     "/db/:key",

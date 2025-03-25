@@ -11,7 +11,8 @@ Update the `wrangler.toml` file with preferred DB ids.
 
 # Execution
 
-`npm start` begins miniflare and starts an instance of the worker locally.
+`npm start` begins miniflare and starts an instance of the worker locally. The 
+app runs at localhost:8787.
 
 `npm run deploy` deploys the worker to your cloudflare account.
 

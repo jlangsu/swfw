@@ -1,26 +1,11 @@
 import { html } from "@core";
 
+const items = ['test','test1','test2'];
+
 export default function Index(): string {
   return html`
-    <p>Page is live</p>
+    <p>index working</p>
+    <!-- loop example -->
+    
   `;
 }
-
-type LoopParams = [
-  any[],
-  variableName: string,
-  content: string,
-]
-
-function loop(...args: LoopParams) {
-  let ret = html``;
-  let i = 0;
-  while(i < args[0].length) {
-    ret += args[2][i];
-    i++;
-  }
-  return ret;
-}
-
-
-

@@ -1,3 +1,5 @@
+import config from '../config';
+
 function html(strings: TemplateStringsArray, ...values: any[]): string {
   return String.raw({ raw: strings }, ...values);
 }
@@ -41,7 +43,7 @@ async function JSONResponse(response: string | any): Promise<Response> {
 async function JSONHandler(args: any): Promise<string> {
   const { route, env } = args;
   const key = (route.pathname as any).groups.key;
-  const data = await env.IsItOpen.get(key);
+  const data = await env[config.databaseName].get(key);
   return data!;
 }
 

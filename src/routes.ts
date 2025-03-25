@@ -7,6 +7,7 @@ const router = new Router([
   [
     "/db/:key",
     async ({ env, route }) => {
+      console.log('env', env);
       const key = route.pathname.groups.key;
       const data = await fetch(`/db/${key}`).then((res) => res.json());
       await env[config.databaseName].put(key, JSON.stringify(data));
